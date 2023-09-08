@@ -41,3 +41,5 @@ let num = 48
 let str = String (num)
 console.log(str)
 console.log(typeof str)
+
+//A simple comment
