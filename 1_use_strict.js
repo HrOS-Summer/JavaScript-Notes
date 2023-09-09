@@ -46,6 +46,7 @@ let str = String (num)
 console.log(str)
 console.log(typeof str)
 
+<<<<<<< HEAD
 // ---------Operations---------
 let val = 4
 let negVal = -val //storing -ve of a value
@@ -64,3 +65,6 @@ console.log(3 + 2 + "6") // 56 Number, String
 console.log(4 - "1") //Number
 console.log("6" - "3") //Number
 console.log("5" - 4) //Number
+=======
+//A simple comment
+>>>>>>> ab7015c06a0d4e7a93257e41c16398ef7115ace8
