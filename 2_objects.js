@@ -19,7 +19,7 @@ const JsUser = {
 
 //accessing objects
 console.log(JsUser.lastLoginDays)
-console.log(JsUser["lastLoginDays"]) //ssquare notation
+console.log(JsUser["lastLoginDays"]) //square notation
  
 //surname cannot be accessed by . operator as it is declared as a String
 console.log(JsUser["surname"])
