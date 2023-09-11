@@ -60,3 +60,19 @@ function returnSecondElement(getArray) {
 }
 
 console.log(returnSecondElement([20, 35, 46, 20]))
+
+//Hoisting
+
+console.log(addOne(5))
+function addOne(num) {
+    return num+1
+}
+
+//console.log(addTwo(7))
+const addTwo = function(num){
+    return num+2
+}
+console.log(addTwo(7))
+
+//In addOne function, it is accessible before declaration but addTwo which is
+//declared using const can only be accessed after declaration of function
