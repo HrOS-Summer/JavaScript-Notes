@@ -19,3 +19,11 @@ console.log(this) //In node environment, it will return empty object because
 
 //If we console.log(this) in browser then it will return window as it is global
 //object in browser
+
+
+//this is not working in a function
+function chai() {
+    let username = "hitesh"
+    console.log(this.username)
+}
+chai() //undefined
