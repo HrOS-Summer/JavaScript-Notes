@@ -1,11 +1,12 @@
  //"use strict"; // treat all code as newer version
  
-//In vs code we actually use node JS and in browser js
+//In vs code we actually use Node.JS and in browser, JS
 const accountID = "21BCS5872" //cannot be reassigned or redeclared
 let accountNumber = "12130848" 
 var password = "Ggs@678" // reassigned, redeclared, global scope
 
-city = "Jaipur" //does not work in strict mode
+city = "Jaipur" //(not using let , var or const) does not work in strict mode
+// ^ datatype - any
 let state; //undefined
 let temp = null; //not undefined but contains no value
 
@@ -40,6 +41,10 @@ console.log("smtp")
 console.log("")
 console.log(+"") //converts string to boolean
 
+let jh; //undefined
+let km = Boolean(jh);  //false
+console.log(km) 
+
 //----Number to String ------
 let num = 48
 let str = String (num)
@@ -66,4 +71,3 @@ console.log("6" - "3") //Number
 console.log("5" - 4) //Number
 
 //A simple comment
-
