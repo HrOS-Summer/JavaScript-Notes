@@ -1,7 +1,6 @@
 //singleton - Object.create
 //object literals
 
-
 //symbol
 const mySym = Symbol("key1") //symbol datatype
 
