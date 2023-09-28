@@ -7,6 +7,7 @@ var password = "Ggs@678" // reassigned, redeclared, global scope
 
 city = "Jaipur" //(not using let , var or const) does not work in strict mode
 // ^ datatype - any
+//^global scope outside function and function scope if declared inside a function
 let state; //undefined
 let temp = null; //not undefined but contains no value
 
