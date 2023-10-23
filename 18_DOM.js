@@ -18,3 +18,4 @@ parent.style.backgroundColor = "green";
 
 console.log(parent.childNodes);
 //Node List counts every thing, the line break, commment, HTML elements etc.
+
