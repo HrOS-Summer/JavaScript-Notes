@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add item</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Python</li>
+    </ul>
+
+</body>
+<script>
+    function addLists(lang) {
+        const list = document.createElement('li');
+        list.innerHTML = `${lang}`;
+        document.querySelector('.language').appendChild(list);
+    }
+    addLists("Java")
+    addLists("JavaScript");
+    addLists("Svelt")
+    //In above method, we are using innerHTML, so we have to traverse whole tree and that is time consuming
+
+    //An optimal way is to create an li element and add a text node to it and then append the li
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("Ruby");
+
+    //Replace content
+    const secondLang = document.querySelector("li:nth-child(2)");
+    //secondLang.innerHTML = "Mojo" or
+    const newli = document.createElement('li');
+    newli.textContent = 'Mojo';
+    secondLang.replaceWith(newli);
+
+    //Meth3
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //Remove an element
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();//Removed Ruby
+</script>
+</html>
