@@ -5,6 +5,7 @@ const keyboard = document.querySelector('#keyboard');
 const game = document.getElementById('game');
 const headphone = document.getElementById('headphone');
 const google = document.getElementById('google');
+const button1 = document.getElementById('but');
 
 printer.onclick = function() {
     alert("Printer clicked");
@@ -63,6 +64,13 @@ google.addEventListener('click', function(e) {
     console.log('Google clicked!');
 })
 
+button1.addEventListener('click', clicked) //Do not put () after function name,
+//it will call the function immediately on loading the page once and do not work
+//on clicking
+
+function clicked() {
+    console.log('Button clicked');
+}
 
 
 
