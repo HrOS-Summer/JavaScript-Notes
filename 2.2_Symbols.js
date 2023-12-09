@@ -41,7 +41,7 @@ for(key in myObj){
     console.log(key, myObj[key]);
 }
 
-console.log('-----------------------------------------');
+console.log('------------------------------------');
 //Stringify : converting object to JSON
 //Here also Symbols are ignored
 console.log(JSON.stringify(myObj));
