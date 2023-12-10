@@ -36,7 +36,7 @@ console.log(obj5)
 
 
 //Method -2 : spread operator(...)
-const obj6 = {...obj1, ...obj2}
+const obj6 = {...obj1, ...obj2, ...obj3}
 console.log(obj6)
 
 //Accessing keys and values of objects
