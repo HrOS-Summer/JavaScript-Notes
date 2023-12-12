@@ -4,7 +4,7 @@ console.log(score);
 const balance = new Number(100)
 console.log(balance);
 
-const bal = balance.toString(); //now bal has all the properties and method of string available
+const bal = balance.toString(); //now bal has all the properties and method available to string
 console.log(bal);
 console.log(typeof bal);
 
