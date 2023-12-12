@@ -16,7 +16,7 @@ console.log(newText); //here we are not modifying the original string
 console.log(playerName.charAt(2)); //to get index value of a string
 console.log(playerName.indexOf('a')); //to get the index of a
 sentence = "Hello World World World";
-console.log(sentence.lastIndexOf('World'));
+console.log(sentence.lastIndexOf('World')); //to get index of last occurence
 
 console.log(playerName.substring(0, 3)); //does not accept negative values
 console.log(playerName.slice(-4, 4));
