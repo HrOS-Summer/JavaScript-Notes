@@ -2,7 +2,7 @@ function Numbers(num1) {
     return num1
 }
 
-console.log(Numbers(200, 350, 798)) //justv pass the first argument
+console.log(Numbers(200, 350, 798)) //just pass the first argument
 
 //If we are not sure about number of arguments user will pass then let user pass n number of 
 //arguments using rest operator(...)

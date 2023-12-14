@@ -1,4 +1,4 @@
-// //[{}, {}, {}] Array of objects
+//[{}, {}, {}] Array of objects
 // const nums = [2, 6, 9, 8]
 // for (const num of nums) { //for-of loop
 //     console.log(num);
@@ -36,7 +36,7 @@
 // }
 // console.log();
 
-// //for-in loop works on Objects
+// for-in loop works on Objects
 // for (const key in myObject) {
 //     console.log(`Extension of ${myObject[key]} is ${key}`);  //prints the keys
 // }
