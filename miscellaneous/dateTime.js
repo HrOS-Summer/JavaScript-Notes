@@ -26,38 +26,38 @@ const currentDate = new Date(); // Date - global class
 // console.log(myCreatedDate2.toLocaleString());
 
                             // mm-dd-yyyy
-let myCreatedDate3 = new Date("01-14-2023");
+//let myCreatedDate3 = new Date("01-14-2023");
 //console.log(myCreatedDate3.toLocaleString());
 
                             // yyyy-mm-dd                 
-let myCreatedDate4 = new Date("2023-01-16");
-console.log(myCreatedDate4.toLocaleString());
+// let myCreatedDate4 = new Date("2023-01-16");
+// console.log(myCreatedDate4.toLocaleString());
 
 //calculate time to execute sum function
 
-let beforeDate = new Date();
-let beforeTime = beforeDate.getTime();
+// let beforeDate = new Date();
+// let beforeTime = beforeDate.getTime();
 
-function sum() {
-    let a = 0;
-    for(let i = 0; i<10000000; i++) {
-        a = a + i;
-    }
-    return a;
-}
+// function sum() {
+//     let a = 0;
+//     for(let i = 0; i<10000000; i++) {
+//         a = a + i;
+//     }
+//     return a;
+// }
 
-let afterDate = new Date();
-let afterTime = afterDate.getTime();
+// let afterDate = new Date();
+// let afterTime = afterDate.getTime();
 
-console.log(afterTime - beforeTime);
+// console.log(afterTime - beforeTime);
 
 //Timestamp
 
-const timestamp = Date.now();
-console.log(Math.floor(timestamp/1000)); //converting milliseconds to seconds
+// const timestamp = Date.now();
+// console.log(Math.floor(timestamp/1000)); //converting milliseconds to seconds
 
 //Custom Date
-let newDate = new Date();
-newDate.toLocaleString('default', {    
-    weekday: "long",               //Ctrl+space - for suggestions                              
-})
+// let newDate = new Date();
+// newDate.toLocaleString('default', {    
+//     weekday: "long",               //Ctrl+space - for suggestions                              
+// })
