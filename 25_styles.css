@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card {
+    height: 300px;
+    width: 250px;
+    background-color: rgb(186, 186, 206);
+    margin: 10px;
+    border-radius: 8px;
+    padding: 13px;
+}
+
+.avatar {
+    background-color: beige;
+    height: 190px;
+    width: 200px;
+    margin: 11px;
+    border-radius: 5px;    
+}
+
+.btn {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.followers {
+    margin: 15px 0 0 10px;
+}

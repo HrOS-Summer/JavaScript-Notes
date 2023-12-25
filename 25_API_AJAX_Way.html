@@ -1,4 +1,7 @@
-<!--Earlier we used to use AJAX - Asynchronous JavaScript and XML
+<!--JSON Formatter https://jsonformatter.org/ - Refer to beautify JSON
+Github API - https://api.github.com/users/hros-summer
+
+Earlier we used to use AJAX - Asynchronous JavaScript and XML
 Also in this file-->
 <!--After the introduction of fetch(), this method is rarely used-->
 
@@ -7,10 +10,22 @@ Also in this file-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="25_styles.css">
+    <title>XHR</title>
 </head>
 <body>
     <h2>Check console</h2>
+    
+    <div class="card">
+        <div class="avatar"></div>
+        <div class="followers"></div>
+        
+    </div>    
+        
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" placeholder="Enter github username"/><br>
+    <button id="btn">Submit</button>
+    
 </body>
 <script>
 //State/Value  Method  Description
@@ -19,22 +34,39 @@ Also in this file-->
     //2	       HEADERS_RECEIVED	send() has been called, and headers and status are available.
     //3	       LOADING	Downloading; responseText holds partial data.
     //4        DONE	    The operation is complete.
-
-    const requestURL = 'https://api.github.com/users/HrOS-Summer';
+    
+     
+    const btn = document.querySelector('#btn');
+    
+    btn.addEventListener('click', fetchData);
+         
+    function fetchData(){
+    const username = document.querySelector('#username').value;
+    const requestURL = `https://api.github.com/users/${username}`;
     //Creating an XMLHttpRequest() object
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://api.github.com/users/HrOS-Summer'); //Initialization
+    xhr.open('GET', requestURL); //Initialization
+    //Above open method not called yet
     //with the help of send(), open() gets called
+
+    //xhr.readtState
     
     xhr.onreadystatechange = function() { //To track all states
         console.log(xhr.readyState);
         if(xhr.readyState === 4) {
             //To get the data of the current context
             const data = JSON.parse(this.responseText); //typeof data = String -> converting it to object (JSON)
-            console.log(data.name);
-            console.log(data.bio);
+            const follower = data.followers;
+            const avatar = data.avatar_url;           
+            
+            const frame = document.querySelector('.avatar');
+            const follower_count = document.querySelector('.followers');            
+            frame.innerHTML = '<img src=' + avatar + 'height="190px" width="200px" >';
+            follower_count.innerHTML = '<h3>' + follower + '</h3>';    
+    
         }
     }
     xhr.send(); //Calls open and sends request to server
+}  
 </script>
 </html>
