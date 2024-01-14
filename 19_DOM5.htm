@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM5</title>
+</head>
+<body>
+    <p>Most famous sports: </p>
+    <ul id="myList">
+        <li>Football</li>
+        <li>Cricket</li>
+        <li>Basketball</li>
+    </ul>
+    <button id="btn-1">Replace Child</button><br>
+
+    <p id="modify">It is raining.</p>
+    <button id="btn-2">Replace Content</button>
+
+    <script>
+        document.getElementById('btn-2').addEventListener('click', () => {
+            const element = document.getElementById('modify');
+            const text = document.createTextNode('It is sunny.');
+            element.replaceChild(text, element.firstChild);
+        })
+
+        document.getElementById('btn-1').addEventListener('click', () => {
+            const newNode = document.createTextNode("Kabbadi");
+            const element = document.getElementById('myList').children[2];
+            element.replaceChild(newNode, element.childNodes[0]);
+        })
+
+    </script>
+</body>
+</html>

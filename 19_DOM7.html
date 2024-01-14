@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM7</title>
+</head>
+<body>
+    <h2>The oninput Attribute</h2>
+    
+    Enter you name : <input type="text" id="fname" oninput="uppercase()">
+    <p>When you write in input field a function is triggered to convert the text to uppercase</p>
+
+    <h2>The onmouseover and onmouseout Attributes</h2>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" id="container" style="background-color: wheat; padding: 8px; border-radius: 4px; width: 150px; height: 50px; text-align: center;">
+        Hover over me!
+    </div>
+
+    <h2>The onmousedown and onmouseup Attributes</h2>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" id="md"
+        style="background-color: cadetblue; width: 170px; height:50px; padding: 10px 8px; border-radius: 7px;"
+    >
+        Click Me!
+    </div>
+<br>
+    <h2>onload and onunload functions</h2>
+    <p>The onload and onunload events are triggered when the user enters or leaves the page.</p>
+    <p>The <b>onload</b> event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information</p>
+    <p>The <b>onload</b> and <b>onunload</b> events can be used to deal with cookies.</p>
+    <script>
+        function uppercase() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function mOver() {
+            document.getElementById('container').innerHTML = "Thank You!";
+        }
+
+        function mOut() {
+            document.getElementById('container').innerHTML = "Hover over me!"
+        }
+
+        function mDown() {
+            const element = document.getElementById('md');
+            element.innerHTML = "Release Me!"
+            element.style.backgroundColor = "red";
+        }
+
+        function mUp() {
+            const element = document.getElementById('md');
+            element.innerHTML = "Click Me!"
+            element.style.backgroundColor = "cadetblue";
+        }
+    </script>
+</body>
+</html>

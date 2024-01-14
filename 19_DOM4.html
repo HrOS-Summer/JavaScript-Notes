@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM4</title>
+</head>
+<body>
+    <h2>Javascript HTML DOM</h2>
+    <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+    <form id="frm1">
+        <label for="fname">First Name : </label>
+        <input type="text" id="fname"><br><br>
+        <label for="lname">Last Name  : </label>
+        <input type="text" id="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+    <p id="demo"></p>
+
+    
+    <br>
+
+    <a name="google" href="#">Google</a><br>
+    <a name="microsoft" href="#">Microsoft</a><br>
+    <a name="meta" href="#">Meta</a>
+    <p id="anch"></p><br>
+
+    
+    <p id="remove">On clicking the remove button, this paragraph will be deleted</p>
+    <button id = "rmBtn" onclick="remove()">Remove</button>
+    <br><br>
+
+    <div id="parent" style="background-color: rgb(153, 142, 142); padding: 5px; border-radius: 8px;">
+        <p id="child-1">This is Child 1</p>
+        <p id="child-2">This is Child 2</p>
+    </div><br>
+    <p>In below input field type either 'child-1' or 'child-2' to remove the particular child</p><br>
+    <input id='rmInput' type="text" placeholder="Enter a child">
+    <button id="rmChild">Remove Child</button><br><br>
+
+    <img src="./images/objectCollections.PNG" alt="difference between object collections and nodeList">
+    <script>
+        const x = document.forms['frm1'];
+        let text = "";
+        for(let i = 0; i<x.length; ++i) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById('demo').innerHTML = text;
+        
+        function remove() {
+            document.getElementById('remove').remove();
+        }
+
+        
+        document.getElementById('rmChild').addEventListener('click', () => {
+            const input = document.getElementById('rmInput').value;
+            const parent = document.getElementById('parent');
+            const child1 = document.getElementById(input);
+            parent.removeChild(child1);
+        })  
+        
+
+        /*
+        Object Collections
+
+        document.anchors
+        document.body
+        document.documentElement
+        document.embeds
+        document.forms
+        Document.head
+        Document.images
+        Document.links
+        Document.scripts
+        document.title
+        */
+
+        
+        document.getElementById('anch').innerHTML = document.anchors.length; 
+        //In case of erors set name attribute to anchor tag
+        
+    </script>
+</body>
+</html>
