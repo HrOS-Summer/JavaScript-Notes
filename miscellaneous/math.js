@@ -8,6 +8,7 @@ const bal = balance.toString(); //now bal has all the properties and method avai
 console.log(bal);
 console.log(typeof bal);
 
+//100.00
 console.log(balance.toFixed(2));
 
 const num = 54.6467;
