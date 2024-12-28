@@ -18,8 +18,9 @@ let sym3 = Symbol('An identifier')
 let sym4 = Symbol("An Identifier")
 console.log(sym3 === sym4); //false because they are different symbols and the value of symbol is unique
 
-const k1 = Symbol()
-const k2 = Symbol()
+console.log('-----------------------------yha dekho-----------------------------');
+const k1 = Symbol('se')
+const k2 = Symbol('se')
 myObj = {};
 myObj[k1] = "Harry"
 myObj[k2] = "Sejal"

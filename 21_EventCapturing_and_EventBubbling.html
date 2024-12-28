@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Listener</title>
+    <style>
+        div {
+            background-color: orange;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        p{
+            background-color: white;
+            border: 1.5px solid black;
+            padding: 12px;            
+        }
+    </style>
 </head>
 <body>
     <h2>JavaScript addEventListener()</h2>
     <div id="div-1">
-        <h2>Bubbling:</h2>
+        <h2>Bubbling:</h2> out -> in
         <p id="p-1">Click Me!</p>
     </div><br>
 
     <div id="div-2">
-        <h2>Capturing:</h2>
+        <h2>Capturing:</h2> in -> out
         <p id="p-2">Click Me!</p>
     </div>
 
@@ -22,7 +35,7 @@
         document.getElementById('p-1').addEventListener('click', function() {
             alert("You clicked on white element");
         }, false) //Default - false
-        document.getElementById('p-1').addEventListener('click', function() {
+        document.getElementById('div-1').addEventListener('click', function() {
             alert("You clicked on orange element");
         })
 
@@ -30,7 +43,7 @@
         document.getElementById('p-2').addEventListener('click', function() {
             alert("You clicked on the white element");
         }, true)
-        document.getElementById('p-2').addEventListener('click', function() {
+        document.getElementById('div-2').addEventListener('click', function() {
             alert('You clicked the orange element');
         }, true)
     </script>

@@ -4,7 +4,7 @@ const user = {
 
     welcomeMessage : function() {
         console.log(`${this.username}, welcome back`)
-        console.log(this)
+        console.log(this) //here this will refer to current instance of user and it will print whole object as this scope is lmited to the user object only
     }
 }
 

@@ -1,11 +1,11 @@
-//Object Destructuring
+//Object Destructuring : unpack properties from objects into distinct variables
 let course = {
-    courseInstructure : "Hitesh",
+    courseInstructor : "Hitesh",
     courseId : "213JBF"
 }
 
-const {courseInstructure : instructure} = course
-console.log(instructure)
+const {courseInstructor : instructor, courseId} = course
+console.log(courseId)
 
 //JSON
 // {

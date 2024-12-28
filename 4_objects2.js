@@ -17,7 +17,8 @@ const regularUser = {
     }
 }
 
-console.log(regularUser.name.userFullName.firstName)
+console.log(regularUser.name.userFullName.firstName) //or
+console.log(regularUser["name"]["userFullName"]["firstName"])
 
 //combining two objects
 const obj1 = {1: "a", 2: "b"}
@@ -68,3 +69,4 @@ tinderUser2["age"] = 23
 tinderUser2["isLoggedIn"] = false
 
 console.log(tinderUser2.hasOwnProperty('isLoggedIn')) //returns true
+console.log(tinderUser2.hasOwnProperty('isLogged')) //returns false

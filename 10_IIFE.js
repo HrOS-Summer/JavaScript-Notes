@@ -22,4 +22,4 @@
 
 ( (name) => {
     console.log(`Hello, ${name}`);  //ES6 template literals
-} )('HrOS')
+} )('HrOS');

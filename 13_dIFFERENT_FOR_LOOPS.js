@@ -9,8 +9,8 @@
 //     console.log(`Each word is ${eachWord}`);
 // }
 
-// //Maps in JS : stores elements in key-value form
-// //Keys must unique
+// Maps in JS : stores elements in key-value form
+// Keys must unique
 // const map = new Map()
 // map.set('IN', "India")
 // map.set('USA', "United States of America")
